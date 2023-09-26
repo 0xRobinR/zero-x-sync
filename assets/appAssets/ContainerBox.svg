@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="345" height="223" viewBox="0 0 345 223">
+    <defs>
+        <linearGradient id="linear-gradient" x1="0.5" y1="-0.053" x2="0.5" y2="1.386" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#e783a5"/>
+            <stop offset="1" stop-color="#fff"/>
+        </linearGradient>
+        <filter id="Rectangle_3" x="0" y="0" width="345" height="223" filterUnits="userSpaceOnUse">
+            <feOffset dx="2" dy="8" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-color="#e2719e"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_3-2" x="0" y="0" width="345" height="223" filterUnits="userSpaceOnUse">
+            <feOffset dx="25" dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="49.5" result="blur-2"/>
+            <feFlood flood-color="#e783a5" result="color"/>
+            <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+            <feComposite operator="in" in="color"/>
+            <feComposite operator="in" in2="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-type="innerShadowGroup">
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_3)">
+            <rect id="Rectangle_3-3" data-name="Rectangle 3" width="327" height="205" rx="18" transform="translate(7 1)" opacity="0.12" fill="url(#linear-gradient)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_3-2)">
+            <rect id="Rectangle_3-4" data-name="Rectangle 3" width="327" height="205" rx="18" transform="translate(7 1)" fill="#fff" opacity="0.12"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,194 @@
+name: wallet
+description: 360 Core Wallet
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0-69.2.beta <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_native_splash: ^2.1.6
+  flutter_svg: ^1.0.3
+  flutter_launcher_icons: ^0.9.2
+  badges: ^2.0.2
+  step_progress_indicator: ^1.0.2
+  google_fonts: ^2.3.2
+  theme_provider: ^0.5.0
+  url_launcher: ^6.1.2
+  shared_preferences: ^2.0.15
+  preload_page_view: ^0.1.6
+  modal_bottom_sheet: ^2.0.1
+  flutter_inappwebview: ^5.1.0+3
+  dio: ^4.0.6
+  cached_network_image: ^3.2.0
+  built_value: ^8.3.0
+  built_collection: ^5.1.1
+  web3dart: ^2.3.5
+  bip39: ^1.0.6
+  ed25519_hd_key: ^2.2.0
+  hex: ^0.2.0
+  convert: ^3.0.1
+  provider: ^6.0.3
+  uuid: ^3.0.6
+  easy_localization: ^3.0.1
+  page_transition: ^2.0.5
+  local_auth: ^2.1.0
+  flutter_spinkit: ^5.1.0
+  flutter_local_notifications: ^9.6.1
+  clipboard: ^0.1.3
+  ethers: ^0.0.1+3
+  bs58: ^1.0.2
+  base58check: ^2.0.0
+  crypto: ^3.0.2
+  buffer: ^1.1.1
+  bip32: ^2.0.0
+  js_shims: ^1.0.0
+  ecdsa: ^0.0.4
+  elliptic: ^0.3.8
+  bitcoin_flutter:
+    git: https://github.com/dart-bitcoin/bitcoin_flutter.git
+  auto_size_text: ^3.0.0
+  vibration: ^1.7.3
+  font_awesome_flutter: ^10.1.0
+  slimy_card: ^1.0.4
+  palette_generator: ^0.3.3
+  curved_navigation_bar: ^1.0.3
+  flutter_snake_navigationbar: ^0.6.1
+  flutter_slidable: ^1.3.0
+  sliver_tools: ^0.2.7
+  pull_to_refresh: ^2.0.0
+  shimmer: ^2.0.0
+  date_format: ^2.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  build_runner: ^2.1.11
+  built_value_generator: ^8.3.0
+  json_serializable: ^6.2.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/appAssets/
+    - assets/splashAssets/
+    - assets/walletAssets/
+    - assets/translations/
+  #   - images/a_dot_ham.jpeg
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/LogoMain.png"
+
+flutter_native_splash:
+  color: "#ffffff"
+  #background_image: "assets/LogoMain.png"
+
+  # Optional parameters are listed below.  To enable a parameter, uncomment the line by removing
+  # the leading # character.
+
+  # The image parameter allows you to specify an image used in the splash screen.  It must be a
+  # png file and should be sized for 4x pixel density.
+  #image: assets/splash.png
+
+  # The branding property allows you to specify an image used as branding in the splash screen.
+  # It must be a png file. Currently, it is only supported for Android < v12 and iOS.
+  #branding: assets/LogoMain.png
+
+  # To position the branding image at the bottom of the screen you can use bottom, bottomRight,
+  # and bottomLeft. The default values is bottom if not specified or specified something else.
+  #branding_mode: bottom
+
+  # The color_dark, background_image_dark, image_dark, branding_dark are parameters that set the background
+  # and image when the device is in dark mode. If they are not specified, the app will use the
+  # parameters from above. If the image_dark parameter is specified, color_dark or
+  # background_image_dark must be specified.  color_dark and background_image_dark cannot both be
+  # set.
+  #color_dark: "#042a49"
+  #background_image_dark: "assets/dark-background.png"
+  #image_dark: assets/splash-invert.png
+  #branding_dark: assets/dart_dark.png
+
+  # Android 12 handles the splash screen differently than previous versions.  Please visit
+  # https://developer.android.com/guide/topics/ui/splash-screen
+  # Following are Android 12 specific parameter.
+  android_12:
+  # The image parameter sets the splash screen icon image.  If this parameter is not specified,
+  # the app's launcher icon will be used instead.
+  # Please note that the splash screen will be clipped to a circle on the center of the screen.
+  # App icon with an icon background: This should be 960×960 pixels, and fit within a circle
+  # 640 pixels in diameter.
+  # App icon without an icon background: This should be 1152×1152 pixels, and fit within a circle
+  # 768 pixels in diameter.
+  #image: assets/android12splash.png
+
+  # App icon background color.
+  #icon_background_color: "#111111"
+
+  # The image_dark parameter and icon_background_color_dark set the image and icon background
+  # color when the device is in dark mode. If they are not specified, the app will use the
+  # parameters from above.
+  #image_dark: assets/android12splash-invert.png
+  #icon_background_color_dark: "#eeeeee"
+
+  # The android, ios and web parameters can be used to disable generating a splash screen on a given
+  # platform.
+  #android: false
+  #ios: false
+  #web: false
+
+  # The position of the splash image can be set with android_gravity, ios_content_mode, and
+  # web_image_mode parameters.  All default to center.
+  #
+  # android_gravity can be one of the following Android Gravity (see
+  # https://developer.android.com/reference/android/view/Gravity): bottom, center,
+  # center_horizontal, center_vertical, clip_horizontal, clip_vertical, end, fill, fill_horizontal,
+  # fill_vertical, left, right, start, or top.
+  #android_gravity: center
+  #
+  # ios_content_mode can be one of the following iOS UIView.ContentMode (see
+  # https://developer.apple.com/documentation/uikit/uiview/contentmode): scaleToFill,
+  # scaleAspectFit, scaleAspectFill, center, top, bottom, left, right, topLeft, topRight,
+  # bottomLeft, or bottomRight.
+  #ios_content_mode: center
+  #
+  # web_image_mode can be one of the following modes: center, contain, stretch, and cover.
+  #web_image_mode: center
+
+  # To hide the notification bar, use the fullscreen parameter.  Has no effect in web since web
+  # has no notification bar.  Defaults to false.
+  # NOTE: Unlike Android, iOS will not automatically show the notification bar when the app loads.
+  #       To show the notification bar, add the following code to your Flutter app:
+  #       WidgetsFlutterBinding.ensureInitialized();
+  #       SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom, SystemUiOverlay.top]);
+  #fullscreen: true
+
+  # If you have changed the name(s) of your info.plist file(s), you can specify the filename(s)
+  # with the info_plist_files parameter.  Remove only the # characters in the three lines below,
+  # do not remove any spaces:
+  #info_plist_files:
+  #  - 'ios/Runner/Info-Debug.plist'
+  #  - 'ios/Runner/Info-Release.plist'
