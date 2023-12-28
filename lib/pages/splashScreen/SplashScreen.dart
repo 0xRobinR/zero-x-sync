@@ -23,7 +23,7 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with HelperClass {
+class _SplashScreenState extends State<SplashScreen> {
 
   bool isLoaded = false;
   bool isError = false;
@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> with HelperClass {
         Navigator.of(context).pushReplacementNamed(currentRoute);
         return;
       } else {
-        showToast(context, "$appName: auth not succeeded");
+        HelperClass.showToast(context, "$appName: auth not succeeded");
         setState(() {
           isLoaded = true;
           isError = true;

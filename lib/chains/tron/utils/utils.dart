@@ -1,15 +1,15 @@
-import 'package:js_shims/js_shims.dart';
+// import 'package:js_shims/js_shims.dart';
 
 hexChar2byte(c) {
   var d;
 
-  if (c >= 'A' && c <= 'F') {
-    d = charCodeAt(c, 0) - charCodeAt('A', 0) + 10;
-  } else if (c >= 'a' && c <= 'f') {
-    d = charCodeAt(c, 0) - charCodeAt('a', 0) + 10;
-  } else if (c >= '0' && c <= '9') {
-    d = charCodeAt(c, 0) - charCodeAt('0', 0);
-  }
+  // if (c >= 'A' && c <= 'F') {
+  //   d = charCodeAt(c, 0) - charCodeAt('A', 0) + 10;
+  // } else if (c >= 'a' && c <= 'f') {
+  //   d = charCodeAt(c, 0) - charCodeAt('a', 0) + 10;
+  // } else if (c >= '0' && c <= '9') {
+  //   d = charCodeAt(c, 0) - charCodeAt('0', 0);
+  // }
 
   if (d is num) {
     return d;
@@ -39,7 +39,8 @@ hexStr2byteArray(String str) {
   var k = 0;
 
   for (var i = 0; i < len; i++) {
-    var c = charAt(str, i);
+    var c;
+    // var c = charAt(str, i);
 
     if (isHexChar(c)) {
       d <<= 4;

@@ -25,7 +25,7 @@ class AppSettings extends StatefulWidget {
   State<AppSettings> createState() => _AppSettingsState();
 }
 
-class _AppSettingsState extends State<AppSettings> with HelperClass {
+class _AppSettingsState extends State<AppSettings> {
 
   bool isDarkMode = true;
   bool is0xSyncMode = false;
@@ -89,34 +89,34 @@ class _AppSettingsState extends State<AppSettings> with HelperClass {
 
         if ( didAuthenticate ) {
           saveToStorage(key: appAuthChannel, value: "true");
-          showToast(context, "success: saved app lock");
+          HelperClass.showToast(context, "success: saved app lock");
           setState(() {
             isAppLockActive = true;
           });
         } else {
-          showToast(context, "error: no auth received");
+          HelperClass.showToast(context, "error: no auth received");
         }
       } on PlatformException catch (e) {
 
         switch(e.code) {
           case auth_error.notEnrolled:
-            showToast(context, "error: no auth enrolled");
+            HelperClass.showToast(context, "error: no auth enrolled");
             break;
           case auth_error.biometricOnlyNotSupported:
-            showToast(context, "error: no biometric available");
+            HelperClass.showToast(context, "error: no biometric available");
             break;
           case auth_error.lockedOut:
-            showToast(context, "error: auth is locked, try again later");
+            HelperClass.showToast(context, "error: auth is locked, try again later");
             break;
           case auth_error.notAvailable:
-            showToast(context, "error: auth is not available");
+            HelperClass.showToast(context, "error: auth is not available");
             break;
         }
       }
     }
     if ( !val ) {
       await removeFromStorage(key: appAuthChannel);
-      showToast(context, "success: disabled app lock");
+      HelperClass.showToast(context, "success: disabled app lock");
       setState(() {
         isAppLockActive = false;
       });
